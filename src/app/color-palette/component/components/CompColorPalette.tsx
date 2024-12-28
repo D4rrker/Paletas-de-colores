@@ -5,6 +5,7 @@ import Link from "next/link";
 import TypeJsonColors from "@/app/types/propTypeJsonMainColor";
 // import { saveFavoritePalets } from "@/app/!global-functions/functionSaveFavoritePalets";
 // import { useMainColorsContext } from "@/app/!context/MainColorsContext";
+// esot es uan prueba 
 
 export default function CompColorPalette({
   mainColor,
