@@ -2,15 +2,12 @@
 
 import { useState, useRef, useEffect } from "react";
 import ColorPalette from "../color-palette/component/ColorPalette";
-import jsonColors from "@/app/json/colors.json";
 
 export default function AllMainPalets() {
   const [visibleCount, setVisibleCount] = useState(8);
   const loadMoreRef = useRef(null);
 
   useEffect(() => {
-    if (!jsonColors) return;
-
     const ldmRef = loadMoreRef.current;
 
     const observer = new IntersectionObserver(

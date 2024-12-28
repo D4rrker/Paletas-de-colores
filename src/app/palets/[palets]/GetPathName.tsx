@@ -112,13 +112,6 @@ export default function GetPathName() {
                 ))}
             </div>
           </div>
-          {/* <CompColorPalette
-            mainColor={findPalet}
-            position={0}
-            getTextColor={getTextColor}
-            setColorCopy={setColorCopy}
-            setShowColor={setShowColor}
-          /> */}
           <NotificationCopy />
         </div>
       </div>
