@@ -1,10 +1,10 @@
 import React from "react";
 import TypeJsonColors from "@/app/types/propTypeJsonMainColor";
 
-export const saveFavoritePalets = (
+export default function saveFavoritePalets(
   { id, colors }: TypeJsonColors,
   setMainColors: React.Dispatch<React.SetStateAction<TypeJsonColors[]>>
-) => {
+) {
   const getSavePalets = localStorage.getItem("allFavPalets");
   const savedPalets = getSavePalets ? JSON.parse(getSavePalets) : [];
 

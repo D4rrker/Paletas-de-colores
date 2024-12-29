@@ -1,6 +1,6 @@
 "use client";
 
-import { useStateNotificationContext } from "../!context/StateNotificationCopyColor";
+import { useStateNotificationContext } from "@/app/!context/StateNotificationCopyColor";
 
 export default function NotificationCopy() {
   const { showColor, colorCopy } = useStateNotificationContext();

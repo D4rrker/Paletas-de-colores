@@ -1,4 +1,4 @@
-import GetPathName from "./GetPathName";
+import GetPathName from "@/app/palets/[palets]/GetPathName";
 
 export default function page() {
   return (

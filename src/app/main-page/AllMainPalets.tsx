@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import ColorPalette from "../color-palette/component/ColorPalette";
+import ColorPalette from "@/app/color-palette/component/ColorPalette";
 
 export default function AllMainPalets() {
   const [visibleCount, setVisibleCount] = useState(8);

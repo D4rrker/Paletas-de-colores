@@ -1,9 +1,9 @@
 "use client";
 
-import AllMainPalets from "./AllMainPalets";
+import AllMainPalets from "@/app/main-page/AllMainPalets";
 // import Link from "next/link";
-import { useMainColorsContext } from "../!context/MainColorsContext";
-import generateColor from "../!global-functions/functionGenerateColors";
+import { useMainColorsContext } from "@/app/!context/MainColorsContext";
+import generateColor from "@/app//!global-functions/functionGenerateColors";
 import NotificationCopy from "@/app/components/NotificationCopy";
 import { useEffect, useRef, useState } from "react";
 
