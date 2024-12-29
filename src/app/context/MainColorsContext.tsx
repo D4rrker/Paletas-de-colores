@@ -7,7 +7,7 @@ import {
   useState,
   useEffect,
 } from "react";
-import generateColor from "@/app/!global-functions/functionGenerateColors.js";
+import generateColor from "@/app/global-functions/functionGenerateColors";
 import TypeJsonColors from "@/app/types/propTypeJsonMainColor";
 
 interface TypeColors {

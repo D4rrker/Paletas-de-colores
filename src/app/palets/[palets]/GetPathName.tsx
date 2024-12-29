@@ -1,9 +1,9 @@
 "use client";
 
 import { useParams } from "next/navigation";
-import { useMainColorsContext } from "@/app/!context/MainColorsContext";
-import { useStateNotificationContext } from "@/app/!context/StateNotificationCopyColor";
-import getTextColor from "@/app/!global-functions/functionGetTextColor";
+import { useMainColorsContext } from "@/app/context/MainColorsContext";
+import { useStateNotificationContext } from "@/app/context/StateNotificationCopyColor";
+import getTextColor from "@/app/global-functions/functionGetTextColor";
 import NotificationCopy from "@/app/components/NotificationCopy";
 import TypeJsonColors from "@/app/types/propTypeJsonMainColor";
 import { useEffect, useState, useRef } from "react";
