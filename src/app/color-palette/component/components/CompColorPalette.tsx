@@ -54,7 +54,7 @@ export default function CompColorPalette({
         </div>
         <div className="w-full flex items-center justify-center bg-white">
           <Link
-            href={`/palets/${mainColor[position].id}`}
+            href={`/palette/${mainColor[position].id}`}
             className="flex justify-between w-full h-full p-3 font-normal group "
           >
             Personalizar
