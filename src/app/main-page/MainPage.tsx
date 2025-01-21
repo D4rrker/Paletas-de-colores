@@ -1,7 +1,6 @@
 "use client";
 
 import AllMainPalets from "@/app/main-page/AllMainPalets";
-// import Link from "next/link";
 import { useMainColorsContext } from "@/app/context/MainColorsContext";
 import generateColor from "@/app/global-functions/functionGenerateColors";
 import NotificationCopy from "@/app/components/NotificationCopy";
@@ -78,12 +77,6 @@ export default function MainPage() {
                 </span>
               </button>
             }
-            {/* <Link
-              href={"/fav-colors"}
-              className="bg-[#1e1e1e] text-white px-8 py-3 rounded-md"
-            >
-              Personalizar Paleta
-            </Link> */}
           </div>
         </div>
         <div>
