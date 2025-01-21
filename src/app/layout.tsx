@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
-import { MainColorsProvider } from "./!context/MainColorsContext";
-import { StateNotificationProvider } from "./!context/StateNotificationCopyColor";
+import { MainColorsProvider } from "./context/MainColorsContext";
+import { StateNotificationProvider } from "./context/StateNotificationCopyColor";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -11,7 +11,8 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: "Generador de paleta de colores.",
-  description: "Genera y personaliza una paleta de colores.",
+  description:
+    "Genera y personaliza tus paletas de colores. Guarda tus favoritas",
 };
 
 export default function RootLayout({
@@ -21,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={`${montserrat.variable} antialiased`}>
+      <body className={`${montserrat.variable} antialiased bg-slate-100`}>
         <MainColorsProvider>
           <StateNotificationProvider>{children}</StateNotificationProvider>
         </MainColorsProvider>

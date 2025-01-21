@@ -16,13 +16,10 @@ export default function Banner() {
           <div className="flex flex-col items-center gap-y-6">
             <h1 className="text-7xl font-bold">Paleta de Colores</h1>
             <h3 className="text-3xl font-normal">
-              Explora, crea y personaliza tus paletas de colores perfectas.
+              Explora y personaliza tus paletas de colores perfectas.
             </h3>
           </div>
           <div className="flex flex-col items-center gap-y-6">
-            <button className="px-6 py-2 rounded-md bg-white text-purple-500">
-              Comenzar
-            </button>
             <div className="flex items-center gap-x-4">
               <div className="outline outline-3 rounded-full w-10 h-10 bg-red-500"></div>
               <div className="outline outline-3 rounded-full w-10 h-10 bg-blue-500"></div>

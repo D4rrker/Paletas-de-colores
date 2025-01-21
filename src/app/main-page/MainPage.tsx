@@ -1,9 +1,9 @@
 "use client";
 
 import AllMainPalets from "./AllMainPalets";
-// import Link from "next/link";
-import { useMainColorsContext } from "../!context/MainColorsContext";
-import generateColor from "../!global-functions/functionGenerateColors";
+import Link from "next/link";
+import { useMainColorsContext } from "../context/MainColorsContext";
+import generateColor from "../global-functions/functionGenerateColors";
 import NotificationCopy from "@/app/components/NotificationCopy";
 import { useEffect, useRef, useState } from "react";
 
@@ -78,12 +78,12 @@ export default function MainPage() {
                 </span>
               </button>
             }
-            {/* <Link
+            <Link
               href={"/fav-colors"}
               className="bg-[#1e1e1e] text-white px-8 py-3 rounded-md"
             >
-              Personalizar Paleta
-            </Link> */}
+              Ver paletas favoritas
+            </Link>
           </div>
         </div>
         <div>
