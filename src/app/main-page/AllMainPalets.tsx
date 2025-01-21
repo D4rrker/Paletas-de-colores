@@ -1,7 +1,7 @@
 "use client";
 
-import ColorPalette from "../color-palette/component/ColorPalette";
-import { InfiniteScroll } from "../global-functions/functionInfiniteScroll";
+import ColorPalette from "@/app/color-palette/component/ColorPalette";
+import { InfiniteScroll } from "@/app/global-functions/functionInfiniteScroll";
 
 export default function AllMainPalets() {
   const loadMoreItems = (prevCount: number) => {

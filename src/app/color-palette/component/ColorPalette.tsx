@@ -3,7 +3,7 @@
 import getTextColor from "@/app/global-functions/functionGetTextColor";
 import { useMainColorsContext } from "@/app/context/MainColorsContext";
 import { useStateNotificationContext } from "@/app/context/StateNotificationCopyColor";
-import CompColorPalette from "./components/CompColorPalette";
+import CompColorPalette from "@/app/color-palette/component/components/CompColorPalette";
 
 export default function ColorPalette({ position }: { position: number }) {
   const { mainColors } = useMainColorsContext();

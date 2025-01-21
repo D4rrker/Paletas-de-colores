@@ -1,12 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import CompColorPalette from "../color-palette/component/components/CompColorPalette";
-import getTextColor from "../global-functions/functionGetTextColor";
-import { useStateNotificationContext } from "../context/StateNotificationCopyColor";
-import TypeJsonColors from "../types/propTypeJsonMainColor";
+import CompColorPalette from "@/app/color-palette/component/components/CompColorPalette";
+import getTextColor from "@/app/global-functions/functionGetTextColor";
+import { useStateNotificationContext } from "@/app/context/StateNotificationCopyColor";
+import TypeJsonColors from "@/app/types/propTypeJsonMainColor";
 import { InfiniteScroll } from "@/app/global-functions/functionInfiniteScroll";
-import NotificationCopy from "../components/NotificationCopy";
+import NotificationCopy from "@/app/components/NotificationCopy";
 import Link from "next/link";
 
 export default function FavoriteColors() {

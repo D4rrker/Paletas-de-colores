@@ -1,5 +1,5 @@
 import React from "react";
-import TypeJsonColors from "../types/propTypeJsonMainColor";
+import TypeJsonColors from "@/app/types/propTypeJsonMainColor";
 
 export const saveFavoritePalets = (
   { id, colors }: TypeJsonColors,

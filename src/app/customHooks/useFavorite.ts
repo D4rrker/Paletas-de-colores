@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import TypeJsonColors from "../types/propTypeJsonMainColor";
+import TypeJsonColors from "@/app/types/propTypeJsonMainColor";
 
 export const useFavorites = () => {
   const [favorites, setFavorites] = useState<TypeJsonColors[]>([]);

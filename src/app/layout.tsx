@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
-import { MainColorsProvider } from "./context/MainColorsContext";
-import { StateNotificationProvider } from "./context/StateNotificationCopyColor";
+import { MainColorsProvider } from "@/app/context/MainColorsContext";
+import { StateNotificationProvider } from "@/app/context/StateNotificationCopyColor";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",

@@ -1,5 +1,5 @@
-import Banner from "./banner/Banner";
-import MainPage from "./main-page/MainPage";
+import Banner from "@/app/banner/Banner";
+import MainPage from "@/app/main-page/MainPage";
 
 export default function Home() {
   return (
