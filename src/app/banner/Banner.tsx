@@ -16,7 +16,7 @@ export default function Banner() {
           <div className="flex flex-col items-center gap-y-6">
             <h1 className="text-7xl font-bold">Paleta de Colores</h1>
             <h3 className="text-3xl font-normal">
-              Explora, crea y personaliza tus paletas de colores perfectas.
+              Explora y personaliza tus paletas de colores perfectas.
             </h3>
           </div>
           <div className="flex flex-col items-center gap-y-6">

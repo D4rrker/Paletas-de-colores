@@ -4,19 +4,27 @@ import Image from "next/image";
 import Link from "next/link";
 import TypeJsonColors from "@/app/types/propTypeJsonMainColor";
 
+import saveFavoritePalets from "@/app/global-functions/functionSaveFavoritePalets";
+import { useMainColorsContext } from "@/app/context/MainColorsContext";
+
 export default function CompColorPalette({
   mainColor,
   position,
   getTextColor,
   setShowColor,
   setColorCopy,
+  onRemoveFavorite,
 }: {
   mainColor: TypeJsonColors[];
   position: number | undefined | null;
   getTextColor: (color: string) => string;
   setShowColor: (value: boolean) => void;
   setColorCopy: (color: string) => void;
+  onRemoveFavorite?: () => void | null;
 }) {
+
+  const { setMainColors } = useMainColorsContext();
+
   if (position !== undefined && position !== null)
     return (
       <div className="relative w-full h-48 grid grid-rows-[1fr_auto] rounded-md shadow-md overflow-hidden hover:shadow-[0px_0px_10px] hover:shadow-blue-400/50 transition-all">
@@ -38,7 +46,7 @@ export default function CompColorPalette({
                   setColorCopy(hex);
                 }}
               >
-                <span className="absolute font-medium pointer-events-none select-none group-hover:opacity-100 opacity-0 transition-opacity">
+                <span className="absolute font-medium pointer-events-none select-none group-hover:opacity-100 opacity-0 transition-opacity uppercase">
                   {mainColor[position].colors[index]}
                 </span>
               </div>
@@ -58,6 +66,34 @@ export default function CompColorPalette({
               className="group-hover:opacity-100 group-hover:translate-x-0 opacity-0 -translate-x-1 transition-all "
             />
           </Link>
+
+          <div
+            className="h-full px-4 flex items-center justify-center cursor-pointer group hover:bg-gray-100"
+            title="Añadir paleta a favoritos"
+            onClick={() => {
+              const obj = mainColor[position];
+              saveFavoritePalets(obj, setMainColors);
+              if (obj.isSaved && onRemoveFavorite != null) onRemoveFavorite();
+            }}
+          >
+            {mainColor[position].isSaved ? (
+              <Image
+                src={"/heard-full.svg"}
+                width={32}
+                height={32}
+                alt="Icono de una estrella hueca por dentro."
+                className="group-active:scale-90 select-none"
+              />
+            ) : (
+              <Image
+                src={"/heard-empty.svg"}
+                width={32}
+                height={32}
+                alt="Icono de una estrella hueca por dentro."
+                className="group-hover:drop-shadow-lg group-active:scale-90 select-none"
+              />
+            )}
+          </div>
         </div>
       </div>
     );

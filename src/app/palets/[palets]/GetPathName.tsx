@@ -8,26 +8,43 @@ import NotificationCopy from "@/app/components/NotificationCopy";
 import TypeJsonColors from "@/app/types/propTypeJsonMainColor";
 import { useEffect, useState, useRef } from "react";
 import Link from "next/link";
+import { useFavorites } from "@/app/customHooks/useFavorite";
 
 export default function GetPathName() {
   const params = useParams<{ palets: string }>();
   const getParam = params.palets;
   const { mainColors } = useMainColorsContext();
+  const { favorites } = useFavorites();
   const { setShowColor, setColorCopy } = useStateNotificationContext();
   const [cloneColors, setCloneColors] = useState<TypeJsonColors | undefined>();
   const inputColor = useRef<(HTMLInputElement | null)[]>([]);
 
-  const findPalet: TypeJsonColors | undefined = mainColors.find(
-    (obj) => getParam === obj.id
-  );
+  const findPalet: TypeJsonColors | undefined =
+    mainColors.find((obj) => getParam === obj.id) ||
+    favorites.find((obj) => getParam === obj.id);
 
   useEffect(() => {
     setCloneColors(findPalet);
   }, [findPalet]);
 
-  if (!cloneColors) return <div>Paleta no encontrada.</div>;
+  if (!cloneColors)
+    return (
+      <div className="flex justify-center">
+        <div className="container">
+          <div className="flex justify-end p-6">
+            <Link
+              className="hidden md:block px-4 py-2 bg-white outline outline-1 outline-gray-300 rounded-sm hover:shadow-md"
+              href={"/"}
+            >
+              Volver
+            </Link>
+          </div>
+          <div className="w-full text-center">Paleta no encontrada.</div>
+        </div>
+      </div>
+    );
 
-  const updateColosr = (index: number, color: string) => {
+  const updateColors = (index: number, color: string) => {
     setCloneColors((prev) => {
       if (!prev) return prev;
 
@@ -80,7 +97,7 @@ export default function GetPathName() {
                     }}
                     onChange={(e) => {
                       const newColor = e.target.value;
-                      updateColosr(index, newColor);
+                      updateColors(index, newColor);
                     }}
                   />
                 </div>
