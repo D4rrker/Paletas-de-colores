@@ -80,7 +80,7 @@ export default function MainPage() {
             }
             <Link
               href={"/fav-colors"}
-              className="bg-[#1e1e1e] text-white px-8 py-3 rounded-md"
+              className="bg-[#1e1e1e] text-center text-white px-8 py-3 rounded-md"
             >
               Ver paletas favoritas
             </Link>
